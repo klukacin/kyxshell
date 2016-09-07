@@ -1,7 +1,7 @@
 # Absolute path to this script.
 echo SCRIPT=$(readlink -f ${BASH_SOURCE[0]})
 # Absolute path this script is in.
-echo SCRIPTPATH=`dirname ${BASH_SOURCE[0]}`
+echo SCRIPTPATH=`dirname $SCRIPT`
 
 # Add mysql folder to path
 PATH="$SCRIPTPATH/mysql:${PATH}"
