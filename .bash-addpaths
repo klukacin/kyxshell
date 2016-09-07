@@ -11,6 +11,11 @@ export PATH
 PATH="$SCRIPTPATH/vmin:${PATH}"
 export PATH
 
+# BASH config
+if [ -f $SCRIPTPATH/aliases/.bash_config ]; then
+    . $SCRIPTPATH/aliases/.bash_config
+fi
+
 # General aliases
 if [ -f $SCRIPTPATH/aliases/.bash_aliases ]; then
     . $SCRIPTPATH/aliases/.bash_aliases
