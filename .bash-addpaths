@@ -11,11 +11,6 @@ export PATH
 PATH="$SCRIPTPATH/vmin:${PATH}"
 export PATH
 
-# BASH config
-if [ -f $SCRIPTPATH/aliases/.bash_config ]; then
-    . $SCRIPTPATH/aliases/.bash_config
-fi
-
 # General aliases
 if [ -f $SCRIPTPATH/aliases/.bash_aliases ]; then
     . $SCRIPTPATH/aliases/.bash_aliases
@@ -39,4 +34,9 @@ fi
 # Fancy prompt
 if [ -f $SCRIPTPATH/aliases/.bash_prompt ]; then
     . $SCRIPTPATH/aliases/.bash_prompt
+fi
+
+# BASH config - added last on purpose
+if [ -f $SCRIPTPATH/aliases/.bash_config ]; then
+    . $SCRIPTPATH/aliases/.bash_config
 fi
