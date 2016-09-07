@@ -1,0 +1,7 @@
+# Drush commands
+alias drushg='drush vset update_max_fetch_time 70'
+
+# Greps
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias grep='grep --color=auto'

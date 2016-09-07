@@ -10,3 +10,28 @@ export PATH
 # Add virtualmin scripts folder to path
 PATH="$SCRIPTPATH/vmin:${PATH}"
 export PATH
+
+# General aliases
+if [ -f $SCRIPTPATH/aliases/.bash_aliases ]; then
+    . $SCRIPTPATH/aliases/.bash_aliases
+fi
+
+# For DevOPS kinda user different SSH aliases to faster connection to servers
+if [ -f $SCRIPTPATH/aliases/.bash_aliases_ssh ]; then
+    . $SCRIPTPATH/aliases/.bash_aliases_ssh
+fi
+
+# My git shortcuts
+if [ -f $SCRIPTPATH/aliases/.bash_aliases_git ]; then
+    . $SCRIPTPATH/aliases/.bash_aliases_git
+fi
+
+# Dev kinda aliases
+if [ -f $SCRIPTPATH/aliases/.bash_aliases_dev ]; then
+    . $SCRIPTPATH/aliases/.bash_aliases_dev
+fi
+
+# Fancy prompt
+if [ -f $SCRIPTPATH/aliases/.bash_prompt ]; then
+    . $SCRIPTPATH/aliases/.bash_prompt
+fi
