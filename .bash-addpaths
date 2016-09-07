@@ -1,0 +1,8 @@
+# Absolute path to this script.
+echo SCRIPT=$(readlink -f $0)
+# Absolute path this script is in.
+echo SCRIPTPATH=`dirname $SCRIPT`
+
+# Added google SDK
+PATH="/Users/kl/Development/google-cloud-sdk/bin:${PATH}"
+export PATH
