@@ -1,8 +1,12 @@
 # Absolute path to this script.
-echo SCRIPT=$(readlink -f ${BASH_SOURCE[0]})
+SCRIPT=$(readlink -f ${BASH_SOURCE[0]})
 # Absolute path this script is in.
-echo SCRIPTPATH=`dirname $SCRIPT`
+SCRIPTPATH=`dirname $SCRIPT`
 
 # Add mysql folder to path
 PATH="$SCRIPTPATH/mysql:${PATH}"
+export PATH
+
+# Add virtualmin scripts folder to path
+PATH="$SCRIPTPATH/vmin:${PATH}"
 export PATH
