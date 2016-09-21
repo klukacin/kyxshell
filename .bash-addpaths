@@ -1,7 +1,8 @@
 # Absolute path to this script.
 #for mac replace BSD to GNU readlink for -f to function
-alias readlink='/usr/local/Cellar/coreutils/8.24/libexec/gnubin/readlink'
-SCRIPT=$(readlink -f ${BASH_SOURCE[0]})
+# you can add this kind of alias for mac
+# alias readlink='/usr/local/Cellar/coreutils/8.24/libexec/gnubin/readlink'
+SCRIPT=$(greadlink -f ${BASH_SOURCE[0]})
 # Absolute path this script is in.
 SCRIPTPATH=`dirname $SCRIPT`
 
