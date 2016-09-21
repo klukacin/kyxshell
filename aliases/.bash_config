@@ -1,4 +1,5 @@
 # Setup colors
-export LS_OPTIONS='--color=auto'
-eval "`dircolors`"
-alias ls='ls $LS_OPTIONS'
+#export LS_OPTIONS='--color=auto'
+#eval "`dircolors`"
+#alias ls='ls $LS_OPTIONS'
+#alias ls='ls --color=auto'

@@ -1,0 +1,32 @@
+#!/bin/bash -
+#title          :fixperm.sh
+#description    :Fixing currect folder permissions
+#author         :Kristijan Lukacin
+#date           :20140302
+#version        :1
+#usage          :./fix_it.sh
+#notes          :
+#bash_version   :4.2.45(1)-release
+#============================================================================$
+START_TIME=$SECONDS
+my_dir="$(dirname "$0")"
+source $my_dir/../basics/ask.sh
+# CONFIG SECTION
+FILE_PERM=664
+FOLDER_PERM=775
+echo "Let's fix something"
+# END OF CONFIG --- Don't edit below this line ---
+MYPWD=$(pwd)
+echo 'Current path: ' $MYPWD
+if ask "Do you wish set permission for folders to $FOLDER_PERM?" N; then
+  echo -n 'Changing folders permissions: '
+  find $MYPWD/ -type d -exec chmod 775 {} \;
+  echo 'Done'
+fi
+if ask "Do you wish to set permissions to files to $FILE_PERM?" N; then
+  echo -n 'Changing files permission: '
+  find $MYPWD/ -type f -exec chmod 664 {} \;
+  echo 'Done'
+fi
+ELAPSED_TIME=$(($SECONDS - $START_TIME))
+source $my_dir/../art/kyx1.sh

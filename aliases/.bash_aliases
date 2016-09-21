@@ -23,7 +23,6 @@ alias tk='tmux new -s kyxshellsession'
 alias tak='tmux a -t kysshellsession'
 
 #Various
-alias which='/usr/bin/which --tty-only --read-alias --show-dot --show-tilde'
 alias howmuch='du -h --max-depth=1 |less'
 
 #Zipping
